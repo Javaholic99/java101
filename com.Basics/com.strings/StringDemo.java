@@ -18,14 +18,5 @@ public class StringDemo {
 		
 		//Strings in java are immutable(once created cannot be altered)
 		
-		//reversing a String
-		char[] myarr= myString1.toCharArray();
-		char[] revarr= new char[myString1.length()];
-		int j=myString1.length()-1;
-		for(int i=0;i< myString1.length();i++) {
-			revarr[j]= myarr[i];
-			j=j-1;
-		}
-		System.out.println(new String(revarr));
 	}
 }
