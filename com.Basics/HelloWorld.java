@@ -1,9 +1,5 @@
 package com.java101.basics;
 
-// Class is a container  which has code in it Main method is the starting point from where your java code starts executing
-// Class Names follow PascalNamingConvention
-//Method Names follow camelNamingConvention
-// All java files have .java extension
 public class HelloWorld {
 	public static void main(String[] args) {
 		System.out.println("Hello world!");
