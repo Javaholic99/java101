@@ -1,5 +1,5 @@
 
-import java.util.HashSet;
+
 import java.util.LinkedHashSet;
 import java.util.Set;
 
@@ -7,7 +7,7 @@ public class StringDuplicate {
     public static void main(String[] args) {
         String myString = "ashfaqqad";
         char a[]= myString.toCharArray();
-        Set <Character> mySet=new LinkedHashSet();
+        Set <Character> mySet=new LinkedHashSet<>();
         for (char c : a) {
             mySet.add(c);
         }
