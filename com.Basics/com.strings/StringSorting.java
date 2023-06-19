@@ -8,7 +8,7 @@ import java.util.TreeSet;
 
 public class StringSorting {
     public static void main(String[] args) {
-        String myString = "spoon";
+        String myString = "Spoon";
         char[] a = myString.toCharArray();
         // Set<Character> charSet= new HashSet<>();
         // for (int i = 0; i < a.length; i++) {
@@ -21,7 +21,12 @@ public class StringSorting {
         for (int i = 0; i < a.length; i++) {
             list.add(a[i]);
         }
-        Collections.sort(list, new caseInsensitivity());
+            Collections.sort(list, new Comparator<Character>() {
+            @Override
+            public int compare(Character s1, Character s2) {
+                return Character.toLowerCase(s1)-Character.toLowerCase(s2);
+            }
+        });
 
         StringBuilder sb = new StringBuilder();
         for (Character character : list) {
@@ -29,13 +34,4 @@ public class StringSorting {
         }
         System.out.println(sb.toString());
     }
-}
-
-class caseInsensitivity implements Comparator<Character> {
-
-    @Override
-    public int compare(Character o1, Character o2) {
-        return o1 - o2;
-    }
-
 }
